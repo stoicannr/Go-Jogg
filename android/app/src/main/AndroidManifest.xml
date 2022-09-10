@@ -1,0 +1,162 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mobile.starter_flutter">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+
+    <!-- Permissions options for the `contacts` group -->
+    <!--    <uses-permission android:name="android.permission.READ_CONTACTS"/>-->
+    <!--    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>-->
+    <!--    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>-->
+
+    <!-- Permissions options for the `storage` group -->
+    <!--    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>-->
+    <!--    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>-->
+
+    <!-- Permissions options for the `camera` group -->
+    <!--    <uses-permission android:name="android.permission.CAMERA"/>-->
+
+    <!-- Permissions options for the `sms` group -->
+    <!--    <uses-permission android:name="android.permission.SEND_SMS"/>-->
+    <!--    <uses-permission android:name="android.permission.RECEIVE_SMS"/>-->
+    <!--    <uses-permission android:name="android.permission.READ_SMS"/>-->
+    <!--    <uses-permission android:name="android.permission.RECEIVE_WAP_PUSH"/>-->
+    <!--    <uses-permission android:name="android.permission.RECEIVE_MMS"/>-->
+
+    <!-- Permissions options for the `phone` group -->
+    <!--    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>-->
+    <!--    <uses-permission android:name="android.permission.CALL_PHONE"/>-->
+    <!--    <uses-permission android:name="android.permission.ADD_VOICEMAIL"/>-->
+    <!--    <uses-permission android:name="android.permission.USE_SIP"/>-->
+    <!--    <uses-permission android:name="android.permission.READ_CALL_LOG"/>-->
+    <!--    <uses-permission android:name="android.permission.WRITE_CALL_LOG"/>-->
+    <!--    <uses-permission android:name="android.permission.BIND_CALL_REDIRECTION_SERVICE"/>-->
+
+    <!-- Permissions options for the `calendar` group -->
+    <!--    <uses-permission android:name="android.permission.READ_CALENDAR" />-->
+    <!--    <uses-permission android:name="android.permission.WRITE_CALENDAR" />-->
+
+    <!-- Permissions options for the `location` group -->
+    <!--    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />-->
+    <!--    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />-->
+    <!--    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />-->
+
+    <!-- Permissions options for the `microphone` or `speech` group -->
+    <!--    <uses-permission android:name="android.permission.RECORD_AUDIO" />-->
+
+    <!-- Permissions options for the `sensors` group -->
+    <!--    <uses-permission android:name="android.permission.BODY_SENSORS" />-->
+
+    <!-- Permissions options for the `accessMediaLocation` group -->
+    <!--    <uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION" />-->
+
+    <!-- Permissions options for the `activityRecognition` group -->
+    <!--    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />-->
+
+    <!-- Permissions options for the `ignoreBatteryOptimizations` group -->
+    <!--    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />-->
+
+    <!-- Permissions options for the `bluetooth` group -->
+    <!--    <uses-permission android:name="android.permission.BLUETOOTH" />-->
+
+    <application
+        android:icon="@mipmap/launcher_icon"
+        android:label="starter_flutter">
+
+        <!--       Todo: Uncomment here if using Google Maps-->
+        <!--       <meta-data android:name="com.google.android.geo.API_KEY"-->
+        <!--           android:value="@string/google_maps_key"/>-->
+
+        <!--       Todo: Uncomment here if using facebook sign in-->
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <meta-data
+            android:name="com.facebook.sdk.ClientToken"
+            android:value="@string/facebook_client_token" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAIT2ayDvG6YtfIzJy30ScbRmkPwuUxgZM" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+
+        <!--        Todo: Uncomment here if using Apple Sign in-->
+        <!--        <activity-->
+        <!--           android:name="com.aboutyou.dart_packages.sign_in_with_apple.SignInWithAppleCallback"-->
+        <!--           android:exported="true"-->
+        <!--           >-->
+        <!--           <intent-filter>-->
+        <!--               <action android:name="android.intent.action.VIEW" />-->
+        <!--               <category android:name="android.intent.category.DEFAULT" />-->
+        <!--               <category android:name="android.intent.category.BROWSABLE" />-->
+
+        <!--               <data android:scheme="signinwithapple" />-->
+        <!--               <data android:path="callback" />-->
+        <!--           </intent-filter>-->
+        <!--        </activity>-->
+
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+            android:hardwareAccelerated="true"
+            android:launchMode="singleTop"
+            android:theme="@style/LaunchTheme"
+            android:windowSoftInputMode="adjustResize">
+            <meta-data
+                android:name="io.flutter.embedding.android.NormalTheme"
+                android:resource="@style/NormalTheme" />
+            <meta-data
+                android:name="io.flutter.embedding.android.SplashScreenDrawable"
+                android:resource="@drawable/launch_background" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- Don't delete the meta-data below.
+             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java -->
+        <meta-data
+            android:name="flutterEmbedding"
+            android:value="2" />
+    </application>
+
+    <!--        Todo: Uncomment here if using Url Launcher-->
+    <!--    <queries>-->
+    <!--        <intent>-->
+    <!--            <action android:name="android.intent.action.VIEW" />-->
+    <!--            <category android:name="android.intent.category.BROWSABLE" />-->
+    <!--            <data android:scheme="https" />-->
+    <!--        </intent>-->
+    <!--        <intent>-->
+    <!--            <action android:name="android.intent.action.VIEW" />-->
+    <!--            <category android:name="android.intent.category.APP_BROWSER" />-->
+    <!--            <data android:scheme="https" />-->
+    <!--        </intent>-->
+    <!--        <intent>-->
+    <!--            <action android:name="android.intent.action.DIAL" />-->
+    <!--            <data android:scheme="tel" />-->
+    <!--        </intent>-->
+    <!--        <intent>-->
+    <!--            <action android:name="android.intent.action.SEND" />-->
+    <!--            <data android:mimeType="*/*" />-->
+    <!--        </intent>-->
+    <!--    </queries>-->
+</manifest>

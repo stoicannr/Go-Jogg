@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- TODO Replace this app name: -->
+    <string name="app_name">flutter_app</string>
+
+    <!-- TODO Replace this with facebook app id: -->
+    <string name="facebook_app_id">1312404342520225</string>
+    <string name="fb_login_protocol_scheme">fb1312404342520225</string>
+    <string name="facebook_client_token">91e93163c1bac465de6953b2522319ff</string>
+
+    <!-- TODO Replace this with Google Maps key: -->
+<!--    <string name="google_maps_key">key</string>-->
+</resources>
