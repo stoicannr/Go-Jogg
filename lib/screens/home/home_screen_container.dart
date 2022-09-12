@@ -255,10 +255,7 @@ class _HomeScreenContainerState extends State<HomeScreenContainer> {
                               'uid': widget.uid,
                               'image': image != null ? image.path : tempImage,
                               'name': widget.ProfileName,
-                              'uploadedImage': downloadURL,
-                              'location1': location1,
-                              'location2': location2,
-                              'location3': location3
+                              'uploadedImage': downloadURL
                             })
                           : FirebaseFirestore.instance
                               .collection('usersData')
@@ -270,9 +267,6 @@ class _HomeScreenContainerState extends State<HomeScreenContainer> {
                               'image': image != null ? image.path : tempImage,
                               'name': widget.ProfileName,
                               'uploadedImage': downloadURL,
-                              'location1': location1,
-                              'location2': location2,
-                              'location3': location3
                             });
                     },
                     child: const Text(

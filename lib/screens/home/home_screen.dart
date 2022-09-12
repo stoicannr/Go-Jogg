@@ -117,8 +117,7 @@ class _HomeScreenState extends State<HomeScreen> {
             _getCurrentPosition();
             var incognitoUsers =
                 users.where((element) => element.incognitoMode == "true");
-            length = users.length - incognitoUsers.length - 1;
-            for (int i = 0; i < length; i++) {
+            for (int i = 0; i < users.length; i++) {
               if (users[i].uid != widget.uid &&
                   users[i].incognitoMode != "true") {
                 personCards.add(PersonCard2(
@@ -164,7 +163,6 @@ class _HomeScreenState extends State<HomeScreen> {
                     length: length,
                   ),
                   ChatScreen(currentUserName: widget.profileName),
-                  // JogsScreen(),
                   SettingsScreen(
                     uid: widget.uid,
                   ),
